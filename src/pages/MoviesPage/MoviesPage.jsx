@@ -34,6 +34,7 @@ const MoviesPage = () => {
         e.preventDefault();
         const query = e.target.elements.query.value;
         setSearchParams({ query });
+         e.target.elements.query.value = '';
     };
 
     return (
@@ -57,3 +58,8 @@ const MoviesPage = () => {
 };
 
 export default MoviesPage;
+
+
+
+
+

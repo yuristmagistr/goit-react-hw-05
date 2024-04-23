@@ -1,0 +1,43 @@
+.itemInfo:hover,
+.itemInfo:active {
+    color: rgb(198, 9, 123);
+    transition: 100ms linear, color 100ms linear;
+}
+
+
+
+
+
+
+
+.itemInfo {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.21;
+    letter-spacing: -0.03em;
+}
+
+.itemInfo:hover,
+.itemInfo:active {
+    color: rgb(198, 9, 123);
+    transition: 100ms linear, color 100ms linear;
+}
+
+.btnBack {
+    text-decoration: none;
+    color: black;
+    margin-left: 15px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.21;
+    letter-spacing: -0.03em;
+    display: flex;
+    gap: 3px;
+}
+
+.btnBack:hover {
+    color: rgb(198, 9, 123);
+    transition: 100ms linear, color 100ms linear;
+}

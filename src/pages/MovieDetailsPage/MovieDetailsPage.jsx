@@ -1,6 +1,7 @@
 import { useEffect, useState, useRef } from "react";
 import { fetchMovieDetails } from "../../api/Api.jsx";
 import { useParams, NavLink, Outlet, useLocation } from 'react-router-dom';
+import css from './MovieDetailsPage.module.css'
 
 const MovieDetails = () => {
     const { movieId } = useParams();
@@ -26,7 +27,7 @@ const MovieDetails = () => {
 
     return (
         <div >
-            <NavLink to={backLinkRef.current} >Go back</NavLink>
+            <NavLink to={backLinkRef.current} className={css.btnBack}>Go back</NavLink>
             {movie && (
                 <div >
                     <img src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt={movie.title} width='250'/>
@@ -44,10 +45,10 @@ const MovieDetails = () => {
                     <h4>Additional information</h4>
                     <ul>
                         <li>
-                            <NavLink to={`/movies/${movieId}/cast`}>Movie Cast</NavLink>
+                            <NavLink to={`/movies/${movieId}/cast`} className={css.itemInfo}>Movie Cast</NavLink>
                         </li>
                         <li>
-                            <NavLink to={`/movies/${movieId}/reviews`}>Movie Reviews</NavLink>
+                            <NavLink to={`/movies/${movieId}/reviews`} className={css.itemInfo}>Movie Reviews</NavLink>
                         </li>
                     </ul>
                     <Outlet />
